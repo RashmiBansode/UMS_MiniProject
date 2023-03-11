@@ -1,38 +1,35 @@
-
-
-
 <div class="container bg-light" id="hi">
     <div class="row justify-content-center">
         <div class="col-xs-6 col-md-6 col-xl-3">
 
-                            <form [formGroup]="loginform">
+            <form [formGroup]="loginform">
 
-                                <h3 class="card-title  text-center mt-2">SignIn here</h3>
-                                <hr>
-                                <div class="Form-Group">
-                                    <label class="Form-label">Email</label>
-                                    <input type="email" name="email" class="form-control" formControlName="email"
-                                        placeholder="enter email"><small class="text-danger" *ngIf="!loginform.get('email')?.valid && loginform.get('email')?.touched">Enter Your Valid Email</small>
-                                        
-                                </div>
-                                <div class="Form-Group">
-                                    <label class="Form-label">Password</label>
-                                    <input type="password" name="pwd" class="form-control" formControlName="pwd"
-                                        placeholder="enter password">
-                                        <small class="text-danger" *ngIf="!loginform.get('pwd')?.valid && loginform.get('pwd')?.touched">Enter Your Password</small>
-                                </div>
-                                <div style="text-align: center;">
-                                <button type="submit" class="btn btn-dark form-control mt-2"
-                                    (click)="post()">Sign-in</button>
-                                </div>
-                                <div class="har d-flex justify-content-between ">
-                                    <a class="card-link mt-3" href="forget">Forget-password-?</a>
-                                    <a class="card-link mt-3" href="register">sign-up</a>
-                                </div>
-                            </form>
-                         </div>
-                    </div>
+                <h3 class="card-title  text-center mt-2">SignIn here</h3>
+                <hr>
+                <div class="Form-Group">
+                    <label class="Form-label">Email</label>
+                    <input type="email" name="email" class="form-control" formControlName="email"
+                        placeholder="enter email"><small class="text-danger"
+                        *ngIf="!loginform.get('email')?.valid && loginform.get('email')?.touched">Enter Your Valid
+                        Email</small>
+
                 </div>
-         
-
-
+                <div class="Form-Group">
+                    <label class="Form-label">Password</label>
+                    <input type="password" name="pwd" class="form-control" formControlName="pwd"
+                        placeholder="enter password">
+                    <small class="text-danger"
+                        *ngIf="!loginform.get('pwd')?.valid && loginform.get('pwd')?.touched">Enter Your
+                        Password</small>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-dark form-control mt-2" (click)="post()">Sign-in</button>
+                </div>
+                <div class="har d-flex justify-content-between ">
+                    <a class="card-link mt-3" [routerLink]="['/forget']">Forget-password-?</a>
+                    <a class="card-link mt-3" [routerLink]="['/register']">sign-up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
