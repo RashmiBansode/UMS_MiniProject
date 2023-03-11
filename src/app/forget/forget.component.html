@@ -1,30 +1,18 @@
-<div class="container">
+<div class="container bg-light" id="hi">
     <div class="row justify-content-center">
-
-        <div class="card w-50" id="hi">
-            <div class="card-body mt-3">
-                <div class="container bg-light ">
-                    <div class="row justify-content-center">
-                        <div class="col">
-
-
-                            <form [formGroup]="pass">
-                                <h3 class="card-title text-center mt-3 ">Forget password</h3>
-                                <hr>
-                                <div class="Form-Group">
-                                    <label class="Form-label">Email :</label>
-                                    <input type="email" class="form-control mb-3" name="emailId" formControlName="emailId"
-                                        placeholder="enter email">
-                                </div>
-                                <div style="text-align: center;">
-                                <button type="button"  class="btn btn-dark mb-3"
-                                    (click)="getPassword()">submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+        <div class="col-xs-6 col-md-6 col-xl-3">
+            <form [formGroup]="pass">
+                <h3 class="card-title text-center mt-3 ">Forget password</h3>
+                <hr>
+                <div class="Form-Group">
+                    <label class="Form-label">Email :</label>
+                    <input type="email" class="form-control mb-3" name="emailId" formControlName="emailId"
+                        placeholder="enter email">
                 </div>
-            </div>
+                <div style="text-align: center;">
+                    <button type="button" class="btn btn-dark mb-3" (click)="getPassword()">submit</button>
+                </div>
+            </form>
         </div>
-    </div>
+    </div>
 </div>
